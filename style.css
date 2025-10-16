@@ -1,65 +1,53 @@
 /* Base */
-* { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
   line-height: 1.6;
 }
-h1, h2 { margin: 0 0 0.5em; }
+h1, h2 {
+  margin: 0 0 0.5em;
+}
 
-/* Sticky Header */
-.site-header{
-  position: sticky;      /* <-- makes it stick */
-  top: 0;                /* <-- stick to top */
-  z-index: 1000;         /* <-- stay above hero */
+/* Header */
+.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
   padding: 12px 16px;
   background: #fff;
-  border-bottom: 1px solid #e6e6e6;
-  backdrop-filter: saturate(120%) blur(4px); /* subtle polish on iOS */
+  border-bottom: 1px solid #ddd;
 }
 
-.brand-wrap{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.logo{
+.logo {
   max-height: 50px;
   width: auto;
-  display: block;
 }
 
-.brand{
+.brand {
   font-size: 1.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-left: 12px;
+  flex: 1;
 }
 
-/* Nav */
-nav ul{
+nav ul {
   list-style: none;
   display: flex;
   gap: 16px;
   margin: 0;
   padding: 0;
 }
-nav a{
+nav a {
   text-decoration: none;
   color: #333;
-  font-weight: 700;
+  font-weight: bold;
 }
-nav a:hover{ color: #178a2f; }
+nav a:hover {
+  color: green;
+}
 
 /* Hero */
-.hero{
+.hero {
   position: relative;
   min-height: 60vh;
   display: grid;
@@ -67,29 +55,24 @@ nav a:hover{ color: #178a2f; }
   text-align: center;
   background: url("hero.png?v=2") center/cover no-repeat;
   color: #fff;
-  padding: 56px 20px; /* spacing under sticky header */
+  padding: 0 20px;
 }
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(0,0,0,0.35);
-  z-index:0;
+  z-index: 0;
 }
-.hero h1, .hero p{
+.hero h1,
+.hero p {
   position: relative;
   z-index: 1;
 }
 
 /* Content */
-.content{
+.content {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
-}
-
-/* Mobile tweaks */
-@media (max-width: 720px){
-  .site-header{ flex-wrap: wrap; }
-  nav ul{ flex-wrap: wrap; gap: 12px; }
-  .brand{ font-size: 1.25rem; }
 }
