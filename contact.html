@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Universal Solutions</title>
+  <title>Services | Universal Solutions</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,38 +15,156 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Contact Us</h1>
-    <p>We’re here to help with extermination, moving, and junk removal in Baltimore and beyond.</p>
+    <h1>Our Services</h1>
+    <p>Reliable, affordable Extermination • Moving • Junk Removal</p>
   </section>
 
   <!-- Content -->
   <section class="content">
-    <h2>Get in Touch</h2>
-    <p><strong>Phone:</strong> (555) 123‑4567</p>
-    <p><strong>Email:</strong> info@universalsolutions.com</p>
-    <p><strong>Service Area:</strong> Baltimore, MD and surrounding regions</p>
+    <h2>Moving</h2>
+    <p>Local and regional moves with trained crews and careful handling.</p>
 
-    <h2>Request a Quote</h2>
-    <form action="mailto:info@universalsolutions.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+    <div class="price-card">
+      <h3>Moving — Pricing</h3>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>Includes</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Package">2 Movers + Truck</td>
+            <td data-label="Includes">2‑hr minimum, pads, dollies</td>
+            <td data-label="Rate">$120/hr</td>
+          </tr>
+          <tr>
+            <td data-label="Package">3 Movers + Truck</td>
+            <td data-label="Includes">2‑hr minimum, pads, dollies</td>
+            <td data-label="Rate">$160/hr</td>
+          </tr>
+          <tr>
+            <td data-label="Package">Labor Only</td>
+            <td data-label="Includes">Load/Unload (no truck)</td>
+            <td data-label="Rate">$90/hr</td>
+          </tr>
+          <tr>
+            <td data-label="Package">Add‑ons</td>
+            <td data-label="Includes">Stairs, long carries, assembly</td>
+            <td data-label="Rate">+$10–$40</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="fine">*2‑hour minimum. Drive time may apply. Ask for a flat‑rate quote for whole‑home moves.</p>
+    </div>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+    <h2>Extermination</h2>
+    <p>Certified pest control for roaches, rodents, bed bugs, and more.</p>
 
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    <div class="price-card">
+      <h3>Extermination — Pricing</h3>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Scope</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Service">General Pest Treatment</td>
+            <td data-label="Scope">Kitchens, baths, baseboards</td>
+            <td data-label="Rate">$125–$175</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Roach Clean‑Out</td>
+            <td data-label="Scope">Apt/Small home + follow‑up</td>
+            <td data-label="Rate">$150–$225</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Bed Bug Inspection</td>
+            <td data-label="Scope">Visual + recommendations</td>
+            <td data-label="Rate">$75</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Bed Bug Treatment</td>
+            <td data-label="Scope">1BR unit (add rooms +$100)</td>
+            <td data-label="Rate">from $350</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Rodent Exclusion</td>
+            <td data-label="Scope">Traps + entry‑point sealing</td>
+            <td data-label="Rate">from $175</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Wasp/Hornet Removal</td>
+            <td data-label="Scope">Single nest</td>
+            <td data-label="Rate">$95–$150</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Quarterly Plan</td>
+            <td data-label="Scope">Scheduled maintenance</td>
+            <td data-label="Rate">Residential $50/visit, Commercial $100/visit</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="fine">*Final quote depends on infestation level, square footage, and materials.</p>
+    </div>
 
-      <button type="submit">Send</button>
-    </form>
+    <!-- Extermination price chart -->
+    <img src="extermination_prices.png" alt="Extermination Price Chart" style="display:block; max-width:100%; height:auto; margin:20px auto;">
+
+    <h2>Junk Removal</h2>
+    <p>Fast, eco‑friendly hauling for homes, offices, and renovations.</p>
+
+    <div class="price-card">
+      <h3>Junk Removal — Pricing</h3>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Load Size</th>
+            <th>Typical Volume</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Load Size">Minimum Pickup</td>
+            <td data-label="Typical Volume">Single item / few bags</td>
+            <td data-label="Rate">$99</td>
+          </tr>
+          <tr>
+            <td data-label="Load Size">¼ Truck</td>
+            <td data-label="Typical Volume">~2–3 cubic yards</td>
+            <td data-label="Rate">$150</td>
+          </tr>
+          <tr>
+            <td data-label="Load Size">½ Truck</td>
+            <td data-label="Typical Volume">~6–7 cubic yards</td>
+            <td data-label="Rate">$300</td>
+          </tr>
+          <tr>
+            <td data-label="Load Size">Full Truck</td>
+            <td data-label="Typical Volume">~12–14 cubic yards</td>
+            <td data-label="Rate">$550</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="fine">*Extra fees for paint/chemicals, pianos, concrete, appliances with refrigerant, etc.</p>
+    </div>
+
+    <p><a class="cta" href="contact.html">Request a Custom Quote →</a></p>
   </section>
 
 </body>
