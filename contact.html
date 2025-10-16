@@ -1,53 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Universal Solutions</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Mohegan Pest Control</title>
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* page-specific light form styling (keeps your main CSS untouched) */
+    .contact-wrap { max-width: 980px; margin: 2rem auto; padding: 0 1rem; }
+    form .row { display: grid; gap: .8rem; grid-template-columns: 1fr; }
+    @media(min-width:720px){ form .row { grid-template-columns: 1fr 1fr; } }
+    label { font-weight: 600; }
+    input, select, textarea {
+      width: 100%; padding: .75rem .9rem; border: 1px solid #e5e7eb; border-radius: .5rem;
+      font: inherit;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    .form-card {
+      border: 1px solid #eee; border-radius: .75rem; padding: 1.2rem; background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,.03);
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <img src="logo.png" alt="Universal Solutions logo" class="logo">
-    <h1 class="brand">Universal Solutions</h1>
-    <nav>
-      <ul>
+  <!-- Header / Nav -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Mohegan Pest Control logo" />
+      <strong>Mohegan Pest Control</strong>
+    </div>
+
+    <nav aria-label="Primary">
+      <a class="menu-toggle" id="mobile-menu" aria-label="Open menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </a>
+      <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Contact Us</h1>
-    <p>We’re here to help with extermination, moving, and junk removal in Baltimore and beyond.</p>
+  <!-- Contact Intro -->
+  <section class="why" style="margin-top:1.5rem;">
+    <h2>Get a Quote or Book a Visit</h2>
+    <p style="text-align:center;max-width:780px;margin:0 auto;">
+      Tell us what you’re dealing with and your preferred time. We’ll confirm fast.
+      Want to call or text instead? <strong>(###) ###-####</strong>
+    </p>
   </section>
 
-  <!-- Content -->
-  <section class="content">
-    <h2>Get in Touch</h2>
-    <p><strong>Phone:</strong>(667)803-4395 </p>
-    <p><strong>Email:</strong> upsolutions369@gmail.com</p>
-    <p><strong>Service Area:</strong> Baltimore, MD and surrounding regions</p>
+  <div class="contact-wrap">
+    <div class="form-card">
+      <!-- NOTE:
+           Replace the Formspree endpoint below with your own (free to set up).
+           Or temporarily switch action="mailto:you@example.com" (less reliable).
+      -->
+      <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+        <input type="hidden" name="_subject" value="New service request from website" />
+        <input type="text" name="_gotcha" style="display:none" aria-hidden="true" />
 
-    <h2>Request a Quote</h2>
-    <form action="mailto:info@universalsolutions.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+        <div class="row">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(###) ###-####" required />
+          </div>
+        </div>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+        <div class="row">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div>
+            <label for="address">Service Address</label>
+            <input id="address" name="address" autocomplete="street-address" required />
+          </div>
+        </div>
 
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <div class="row">
+          <div>
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service…</option>
+              <option>German Cockroach Treatment</option>
+              <option>Bed Bug Program</option>
+              <option>Rodent Control</option>
+              <option>Ant Treatment</option>
+              <option>Flea Treatment</option>
+              <option>Quarterly Protection Plan</option>
+              <option>Inspection / Quote Only</option>
+            </select>
+          </div>
+          <div>
+            <label for="preferred-time">Preferred Day/Time</label>
+            <input id="preferred-time" name="preferred_time" placeholder="e.g., Sat between 10a–1p" />
+          </div>
+        </div>
 
-      <button type="submit">Send</button>
-    </form>
-  </section>
+        <div style="margin-top:.8rem;">
+          <label for="details">Tell us what you’re seeing</label>
+          <textarea id="details" name="details" placeholder="Where do you see activity? How long has it been happening? Any pets/kids?"></textarea>
+        </div>
 
+        <div style="margin-top:1rem;">
+          <button class="btn" type="submit">Send Request</button>
+          <a class="btn" href="tel:###-###-####" style="margin-left:.5rem;">Call Now</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Alt contact details -->
+    <section class="why" style="margin-top:2rem;">
+      <h2>Other Ways to Reach Us</h2>
+      <ul class="why-list">
+        <li><i>📞</i><span><strong>Phone:</strong> (###) ###-####</span></li>
+        <li><i>✉️</i><span><strong>Email:</strong> hello@yourdomain.com</span></li>
+        <li><i>📍</i><span><strong>Service Area:</strong> Baltimore & surrounding counties</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <h4>Hours</h4>
+      <ul>
+        <li>Mon–Sat: 8:00a – 7:00p</li>
+        <li>Emergency slots available</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Mohegan Pest Control</div>
+  </footer>
+
+  <!-- Small JS: mobile menu + year + read ?svc from URL to preselect -->
+  <script>
+    (function(){
+      // mobile nav
+      const btn = document.getElementById('mobile-menu');
+      const list = document.getElementById('nav-list');
+      function toggle(){ list.classList.toggle('show'); }
+      if (btn) {
+        btn.addEventListener('click', toggle);
+        btn.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') toggle(); });
+      }
+      // footer year
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      // preselect service from query string, e.g. contact.html?svc=bedbugs
+      const params = new URLSearchParams(window.location.search);
+      const svc = params.get('svc');
+      const map = {
+        roaches: 'German Cockroach Treatment',
+        bedbugs: 'Bed Bug Program',
+        rodents: 'Rodent Control',
+        ants: 'Ant Treatment',
+        fleas: 'Flea Treatment',
+        plan: 'Quarterly Protection Plan'
+      };
+      if (svc && map[svc]) {
+        const select = document.getElementById('service');
+        [...select.options].forEach(o => { if (o.text === map[svc]) o.selected = true; });
+      }
+    })();
+  </script>
 </body>
-</html
+</html>
