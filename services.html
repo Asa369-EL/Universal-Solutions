@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/logo.png" />
   <style>
-    /* Minimal styling for hero & logo */
     .logo img {
       height: 56px;
       width: auto;
@@ -42,70 +41,163 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Universal Solutions Logo" />
-      </a>
-      <span><strong>Universal Solutions</strong></span>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Universal Solutions Logo" />
+    </a>
+    <span><strong>Universal Solutions</strong></span>
+  </div>
+  <nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span><span></span><span></span>
     </div>
-    <nav>
-      <div class="menu-toggle" id="mobile-menu">
-        <span></span><span></span><span></span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <img src="images/hero.png" alt="Moving, Junk Removal & Pest Control" />
+  <h1>Our Services</h1>
+  <p>Your one-stop solution for moving, hauling and pest control in Baltimore and surrounding areas.</p>
+</section>
+
+<main>
+  <div class="services-container">
+
+    <!-- Moving Services -->
+    <div class="service-section" id="moving">
+      <h2>Moving Services</h2>
+      <p>Whether you’re relocating across town or to a neighboring city, our moving professionals can get you there safely and stress-free. We provide both residential and commercial moving solutions, from packing and loading to unloading and unpacking. With our fleet of well-maintained trucks and trained movers, your belongings will be transported securely and efficiently.</p>
+      <ul class="why-list">
+        <li>🚚 Local &amp; long-distance moves</li>
+        <li>🔧 Furniture disassembly and assembly</li>
+        <li>🏋️ Heavy item handling (pianos, safes and more)</li>
+        <li>📦 Packing, wrapping &amp; protection materials</li>
+      </ul>
+    </div>
+
+    <!-- Junk Removal -->
+    <div class="service-section" id="junk-removal">
+      <h2>Junk Removal</h2>
+      <p>Clear out clutter quickly with our junk removal and hauling team. From single items to full property cleanouts, we remove and dispose of unwanted belongings responsibly. We donate and recycle whenever possible to minimize waste and ensure your space is left clean and ready for its next chapter.</p>
+      <ul class="why-list">
+        <li>🛋 Furniture &amp; appliance removal</li>
+        <li>♻️ Eco-friendly disposal &amp; recycling</li>
+        <li>🌿 Yard debris &amp; construction waste hauling</li>
+        <li>🏠 Estate, garage &amp; office cleanouts</li>
+      </ul>
+
+      <div class="pricing-table">
+        <h3>Junk Removal &amp; Hauling Pricing</h3>
+        <table>
+          <thead><tr><th>Service</th><th>Description</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>Single Item Removal</td><td>Appliance, mattress or furniture</td><td>$70–$150</td></tr>
+            <tr><td>Small Load</td><td>Up to 1/4 truck (80–120 ft³)</td><td>$100–$150</td></tr>
+            <tr><td>Medium Load</td><td>Up to 1/2 truck (180–240 ft³)</td><td>$200–$300</td></tr>
+            <tr><td>Large Load</td><td>Up to 3/4 truck (300–360 ft³)</td><td>$300–$380</td></tr>
+            <tr><td>Full Load</td><td>Up to full truck (420–480 ft³)</td><td>$400–$450</td></tr>
+            <tr><td>Yard &amp; Construction Debris</td><td>Per cubic yard</td><td>$60–$125</td></tr>
+          </tbody>
+        </table>
       </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    </div>
+
+    <!-- Pest Control -->
+    <div class="service-section" id="pest-control">
+      <h2>Pest Control</h2>
+      <p>Protect your home or business from unwanted invaders. Our certified technicians provide comprehensive pest extermination and prevention programs tailored to your specific infestation and environment. We use integrated pest management techniques that are safe for families, pets and the planet.</p>
+      <ul class="why-list">
+        <li>🐞 Roach, ant, flea &amp; tick control</li>
+        <li>🐭 Rodent control &amp; exclusion</li>
+        <li>🛌 Bed bug heat &amp; chemical treatments</li>
+        <li>🐜 Termite inspection &amp; treatment</li>
       </ul>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="images/hero.png" alt="Moving, Junk Removal & Pest Control" />
-    <h1>Our Services</h1>
-    <p>Your one-stop solution for moving, hauling and pest control in Baltimore and surrounding areas.</p>
-  </section>
+      <div class="pricing-table">
+        <h3>General Pest Control Pricing</h3>
+        <table>
+          <thead><tr><th>Pest</th><th>Description</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>Roach (Severe)</td><td>Gel bait &amp; fogging</td><td>$150–$250</td></tr>
+            <tr><td>Bed Bug</td><td>Heat/chemical combo</td><td>$250–$600</td></tr>
+            <tr><td>Fleas / Ticks</td><td>Interior &amp; yard treatment</td><td>$125–$225</td></tr>
+            <tr><td>Ants</td><td>Gel bait + perimeter</td><td>$100–$175</td></tr>
+            <tr><td>Rodent</td><td>Bait stations, traps</td><td>$125–$250</td></tr>
+            <tr><td>Wasp / Hornet</td><td>Nest removal</td><td>$100–$175</td></tr>
+            <tr><td>Termite Inspection</td><td>Visual/moisture inspection</td><td>$75–$125</td></tr>
+            <tr><td>Termite Treatment</td><td>Trenching + bait system</td><td>$800–$1,500</td></tr>
+          </tbody>
+        </table>
 
-  <main>
-    <!-- keep all your existing service sections and pricing here -->
-  </main>
+        <h3>Monthly Extermination Rotation</h3>
+        <table>
+          <thead><tr><th>Plan</th><th>Price</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>Residential</td><td>$50/month</td><td>Monthly extermination service for homes</td></tr>
+            <tr><td>Commercial</td><td>$100/month</td><td>Monthly extermination service for businesses</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
 
-  <footer>
-    <div class="footer-section">
-      <h4>About Us</h4>
-      <p>Universal Solutions is a locally owned and operated company offering comprehensive moving, junk removal and pest control services. Our certified professionals are committed to providing safe, reliable and affordable solutions for homes and businesses.</p>
-    </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>Contact Us</h4>
-      <ul>
-        <li>☎️ (410) 555-1234</li>
-        <li>✉️ info@universalsolutions.com</li>
-        <li>📍 Baltimore, MD & Surrounding Areas</li>
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      &copy; <span id="currentYear"></span> Universal Solutions. All rights reserved.
-    </div>
-  </footer>
+<!-- Pricing Overview -->
+<section class="pricing-overview">
+  <h2>Pricing Overview</h2>
+  <table>
+    <thead><tr><th>Category</th><th>Services</th><th>Range</th><th>Average</th></tr></thead>
+    <tbody>
+      <tr><td>Junk Removal</td><td>6</td><td>$60–$450</td><td>$223.75</td></tr>
+      <tr><td>General Pest Control</td><td>8</td><td>$75–$1,500</td><td>$314.06</td></tr>
+      <tr><td>Specialized Treatments</td><td>8</td><td>$75–$1,500</td><td>$317.19</td></tr>
+      <tr><td>Add-On Services</td><td>4</td><td>$50–$200</td><td>$111.88</td></tr>
+      <tr><td>Commercial & Multi-Unit</td><td>3</td><td>$45–$250</td><td>$140.83</td></tr>
+      <tr><td>Monthly Rotation</td><td>2</td><td>$50–$100</td><td>$75.00</td></tr>
+    </tbody>
+  </table>
+</section>
 
-  <script>
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navList = document.querySelector("header nav ul");
-    mobileMenu.addEventListener("click", () => {
-      navList.classList.toggle("show");
-    });
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
-  </script>
+<footer>
+  <div class="footer-section">
+    <h4>About Us</h4>
+    <p>Universal Solutions is a locally owned and operated company offering comprehensive moving, junk removal and pest control services. Our certified professionals are committed to providing safe, reliable and affordable solutions for homes and businesses.</p>
+  </div>
+  <div class="footer-section">
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h4>Contact Us</h4>
+    <ul>
+      <li>☎️ (410) 555-1234</li>
+      <li>✉️ info@universalsolutions.com</li>
+      <li>📍 Baltimore, MD &amp; Surrounding Areas</li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    &copy; <span id="currentYear"></span> Universal Solutions. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navList = document.querySelector("header nav ul");
+  mobileMenu.addEventListener("click", () => {
+    navList.classList.toggle("show");
+  });
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
