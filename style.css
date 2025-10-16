@@ -1,11 +1,13 @@
-/* Base */
+/* Base styles */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
   line-height: 1.6;
 }
-h1, h2 {
+
+h1,
+h2 {
   margin: 0 0 0.5em;
 }
 
@@ -37,16 +39,24 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+
 nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
+
 nav a:hover {
   color: green;
 }
 
-/* Hero */
+/* Active nav link */
+nav a.active {
+  color: green;
+  border-bottom: 2px solid green;
+}
+
+/* Hero section */
 .hero {
   position: relative;
   min-height: 60vh;
@@ -57,22 +67,124 @@ nav a:hover {
   color: #fff;
   padding: 0 20px;
 }
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 0;
 }
+
 .hero h1,
 .hero p {
   position: relative;
   z-index: 1;
 }
 
-/* Content */
+/* Main content */
 .content {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
+}
+
+/* Price cards and tables */
+.price-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0 28px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.price-card h3 {
+  margin: 0 0 12px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.price-table thead th {
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 8px;
+}
+
+.price-table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 8px;
+  vertical-align: top;
+}
+
+.fine {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: green;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cta:hover {
+  opacity: 0.9;
+}
+
+/* Form elements */
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  background: green;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive price tables */
+@media (max-width: 640px) {
+  .price-table thead {
+    display: none;
+  }
+  .price-table tr {
+    display: block;
+    margin: 0 0 14px;
+  }
+  .price-table td {
+    display: block;
+    border-bottom: 0;
+    padding: 6px 0;
+  }
+  .price-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    display: block;
+    color: #333;
+  }
 }
