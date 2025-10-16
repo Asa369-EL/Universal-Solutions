@@ -1,80 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Universal Solutions</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <style>
-      /* Hero styling */
-      .hero {
-        position: relative;
-        min-height: 260px;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-        text-align: center;
-        color: #fff;
-      }
-      .hero__bg {
-        position: absolute;
-        inset: 0;
-        background: url("images/hero.png") center/cover no-repeat;
-        filter: brightness(.7);
-      }
-      .hero__inner {
-        position: relative;
-        padding: 48px 16px;
-        max-width: 900px;
-      }
-      .hero h1 {
-        font-size: clamp(28px, 5vw, 44px);
-        margin: 0 0 12px;
-        text-shadow: 0 3px 10px rgba(0,0,0,.4);
-      }
-      .hero p {
-        font-size: clamp(16px, 3.5vw, 20px);
-        margin: 0;
-        text-shadow: 0 2px 8px rgba(0,0,0,.4);
-      }
-      .logo img {
-        height: 56px;
-        width: auto;
-        vertical-align: middle;
-      }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Universal Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <style>
+    /* Minimal styling for hero & logo */
+    .logo img {
+      height: 56px;
+      width: auto;
+      vertical-align: middle;
+    }
+    .hero {
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.7);
+    }
+    .hero h1, .hero p {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      margin: 0;
+    }
+    .hero h1 {
+      top: 40%;
+      font-size: 2.5rem;
+    }
+    .hero p {
+      top: 55%;
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
-<header>
+  <header>
     <div class="logo">
-        <a href="index.html">
-          <img src="images/logo.png" alt="Universal Solutions Logo">
-        </a>
-        <span><strong>Universal Solutions</strong></span>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Universal Solutions Logo" />
+      </a>
+      <span><strong>Universal Solutions</strong></span>
     </div>
     <nav>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span><span></span><span></span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero__bg"></div>
-        <div class="hero__inner">
-          <h1>Our Services</h1>
-          <p>Your one-stop solution for moving, hauling and pest control in Baltimore and surrounding areas.</p>
-        </div>
-    </section>
-    <div class="services-container">
-        <!-- (your existing service sections, pricing tables, etc. remain unchanged) --> 
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero.png" alt="Moving, Junk Removal & Pest Control" />
+    <h1>Our Services</h1>
+    <p>Your one-stop solution for moving, hauling and pest control in Baltimore and surrounding areas.</p>
+  </section>
+
+  <main>
+    <!-- keep all your existing service sections and pricing here -->
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>Universal Solutions is a locally owned and operated company offering comprehensive moving, junk removal and pest control services. Our certified professionals are committed to providing safe, reliable and affordable solutions for homes and businesses.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <ul>
+        <li>☎️ (410) 555-1234</li>
+        <li>✉️ info@universalsolutions.com</li>
+        <li>📍 Baltimore, MD & Surrounding Areas</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="currentYear"></span> Universal Solutions. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navList = document.querySelector("header nav ul");
+    mobileMenu.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
