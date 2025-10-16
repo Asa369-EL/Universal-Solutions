@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Mohegan Pest Control</title>
+  <title>Contact | Universal Solutions</title>
   <link rel="icon" href="images/logo.png" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* page-specific light form styling (keeps your main CSS untouched) */
+    /* page-specific light form styling; keeps main stylesheet untouched */
     .contact-wrap { max-width: 980px; margin: 2rem auto; padding: 0 1rem; }
     form .row { display: grid; gap: .8rem; grid-template-columns: 1fr; }
     @media(min-width:720px){ form .row { grid-template-columns: 1fr 1fr; } }
@@ -28,8 +28,8 @@
   <!-- Header / Nav -->
   <header>
     <div class="logo">
-      <img src="images/logo.png" alt="Mohegan Pest Control logo" />
-      <strong>Mohegan Pest Control</strong>
+      <img src="images/logo.png" alt="Universal Solutions logo" />
+      <strong>Universal Solutions</strong>
     </div>
 
     <nav aria-label="Primary">
@@ -48,19 +48,16 @@
   <section class="why" style="margin-top:1.5rem;">
     <h2>Get a Quote or Book a Visit</h2>
     <p style="text-align:center;max-width:780px;margin:0 auto;">
-      Tell us what you’re dealing with and your preferred time. We’ll confirm fast.
-      Want to call or text instead? <strong>(###) ###-####</strong>
+      Tell us what you’re dealing with and your preferred time. We’ll confirm quickly.
+      Prefer to call or text? <strong>(###) ###-####</strong>
     </p>
   </section>
 
   <div class="contact-wrap">
     <div class="form-card">
-      <!-- NOTE:
-           Replace the Formspree endpoint below with your own (free to set up).
-           Or temporarily switch action="mailto:you@example.com" (less reliable).
-      -->
+      <!-- Replace the Formspree endpoint with your own OR switch to mailto (see note below). -->
       <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
-        <input type="hidden" name="_subject" value="New service request from website" />
+        <input type="hidden" name="_subject" value="New service request from Universal Solutions website" />
         <input type="text" name="_gotcha" style="display:none" aria-hidden="true" />
 
         <div class="row">
@@ -107,7 +104,7 @@
 
         <div style="margin-top:.8rem;">
           <label for="details">Tell us what you’re seeing</label>
-          <textarea id="details" name="details" placeholder="Where do you see activity? How long has it been happening? Any pets/kids?"></textarea>
+          <textarea id="details" name="details" placeholder="Where do you see activity? How long? Any pets/kids?"></textarea>
         </div>
 
         <div style="margin-top:1rem;">
@@ -123,7 +120,7 @@
       <ul class="why-list">
         <li><i>📞</i><span><strong>Phone:</strong> (###) ###-####</span></li>
         <li><i>✉️</i><span><strong>Email:</strong> hello@yourdomain.com</span></li>
-        <li><i>📍</i><span><strong>Service Area:</strong> Baltimore & surrounding counties</span></li>
+        <li><i>📍</i><span><strong>Service Area:</strong> Baltimore &amp; surrounding counties</span></li>
       </ul>
     </section>
   </div>
@@ -137,10 +134,10 @@
         <li>Emergency slots available</li>
       </ul>
     </div>
-    <div class="footer-bottom">© <span id="year"></span> Mohegan Pest Control</div>
+    <div class="footer-bottom">© <span id="year"></span> Universal Solutions</div>
   </footer>
 
-  <!-- Small JS: mobile menu + year + read ?svc from URL to preselect -->
+  <!-- JS: mobile menu + year + preselect service from ?svc= -->
   <script>
     (function(){
       // mobile nav
@@ -155,7 +152,7 @@
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
 
-      // preselect service from query string, e.g. contact.html?svc=bedbugs
+      // preselect service from query string, e.g., contact.html?svc=bedbugs
       const params = new URLSearchParams(window.location.search);
       const svc = params.get('svc');
       const map = {
