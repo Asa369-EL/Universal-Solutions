@@ -1,24 +1,6 @@
-.hero {
-  position: relative;
-  min-height: 60vh;
-  display: grid;
-  place-items: center;
-  background: url("hero.png") center/cover no-repeat;
+.site-header{
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px;
 }
-
-/* overlay goes under the text */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35); /* adjust darkness here */
-  z-index: 0;
-}
-
-/* text goes above overlay */
-.hero h1 {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  text-align: center;
-}
+.logo{ max-height:56px; width:auto; display:block; }
+.brand{ margin:0; font-size:1.5rem; }
