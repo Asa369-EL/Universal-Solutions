@@ -1,90 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Universal Solutions</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Mohegan Pest Control</title>
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <img src="logo.png" alt="Universal Solutions logo" class="logo">
-    <h1 class="brand">Universal Solutions</h1>
-    <nav>
-      <ul>
+  <!-- Header / Nav -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Mohegan Pest Control logo" />
+      <strong>Mohegan Pest Control</strong>
+    </div>
+
+    <nav aria-label="Primary">
+      <a class="menu-toggle" id="mobile-menu" aria-label="Open menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </a>
+      <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="services.html">Services</a></li>
+        <li><a class="active" href="services.html" aria-current="page">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Our Services</h1>
-    <p>Reliable, affordable Extermination • Moving • Junk Removal</p>
+  <!-- Page intro (no big hero to keep things tight) -->
+  <section class="why" style="margin-top:1.5rem;">
+    <h2>Services & Pricing</h2>
+    <p style="text-align:center;max-width:780px;margin:0 auto;">
+      Fast, professional treatments with kid- and pet-conscious products. Transparent pricing below.
+      Bundle services for a discount—ask on the <a href="contact.html#contact-form">contact form</a>.
+    </p>
   </section>
 
-  <!-- Content -->
-  <section class="content">
-    <h2>Moving</h2>
-    <p>Local and regional moves with trained crews and careful handling.</p>
+  <!-- Services grid -->
+  <section class="services-preview">
+    <!-- Roaches -->
+    <article class="service-card">
+      <i>🪳</i>
+      <h3>German Cockroach Treatment</h3>
+      <p>Targeted gel baits + growth regulators + crack & crevice application. Kitchen/bath focus with follow-up plan.</p>
+      <ul class="why-list" style="margin-top:.6rem;">
+        <li><i>✔️</i><span>Initial service (up to 1,200 sq ft)</span></li>
+        <li><i>✔️</i><span>2-week re-visit included</span></li>
+      </ul>
+      <p style="font-weight:700;margin-top:.6rem;">From $145 initial · $95 follow-ups</p>
+      <a class="btn" href="contact.html?svc=roaches#contact-form" aria-label="Request roach treatment">Book this</a>
+    </article>
 
-    <div class="price-card">
-      <h3>Moving — Pricing</h3>
-      <table class="price-table">
-        <thead><tr><th>Package</th><th>Includes</th><th>Rate</th></tr></thead>
-        <tbody>
-          <tr><td>2 Movers + Truck</td><td>2-hr minimum, pads, dollies</td><td>$120/hr</td></tr>
-          <tr><td>3 Movers + Truck</td><td>2-hr minimum, pads, dollies</td><td>$160/hr</td></tr>
-          <tr><td>Labor Only</td><td>Load/Unload (no truck)</td><td>$90/hr</td></tr>
-          <tr><td>Add-ons</td><td>Stairs, long carries, assembly</td><td>+$10–$40</td></tr>
-        </tbody>
-      </table>
-      <p class="fine">*2-hour minimum. Drive time may apply. Ask for a flat-rate quote for whole-home moves.</p>
-    </div>
+    <!-- Bed Bugs -->
+    <article class="service-card">
+      <i>🛏️</i>
+      <h3>Bed Bug Program</h3>
+      <p>Comprehensive multi-room treatment with encasement guidance, monitoring, and prep checklist.</p>
+      <ul class="why-list" style="margin-top:.6rem;">
+        <li><i>✔️</i><span>2 service visits (2 weeks apart)</span></li>
+        <li><i>✔️</i><span>Passive monitors installed</span></li>
+      </ul>
+      <p style="font-weight:700;margin-top:.6rem;">From $325 per room · packages available</p>
+      <a class="btn" href="contact.html?svc=bedbugs#contact-form" aria-label="Request bed bug service">Book this</a>
+    </article>
 
-    <h2>Extermination</h2>
-    <p>Certified pest control for roaches, rodents, bed bugs, and more.</p>
+    <!-- Rodents -->
+    <article class="service-card">
+      <i>🐭</i>
+      <h3>Rodent Control</h3>
+      <p>Exterior baiting, interior trapping, entry-point assessment, and sanitation recommendations.</p>
+      <ul class="why-list" style="margin-top:.6rem;">
+        <li><i>✔️</i><span>Inspection + written plan</span></li>
+        <li><i>✔️</i><span>Follow-up visit included</span></li>
+      </ul>
+      <p style="font-weight:700;margin-top:.6rem;">From $165 initial · $110 follow-ups</p>
+      <a class="btn" href="contact.html?svc=rodents#contact-form" aria-label="Request rodent control">Book this</a>
+    </article>
 
-    <div class="price-card">
-      <h3>Extermination — Pricing</h3>
-      <table class="price-table">
-        <thead><tr><th>Service</th><th>Scope</th><th>Rate</th></tr></thead>
-        <tbody>
-          <tr><td>General Pest Treatment</td><td>Kitchens, baths, baseboards</td><td>$125–$175</td></tr>
-          <tr><td>Roach Clean-Out</td><td>Apt/Small home + follow-up</td><td>$150–$225</td></tr>
-          <tr><td>Bed Bug Inspection</td><td>Visual + recommendations</td><td>$75</td></tr>
-          <tr><td>Bed Bug Treatment</td><td>1BR unit (add rooms +$100)</td><td>from $350</td></tr>
-          <tr><td>Rodent Exclusion</td><td>Traps + entry-point sealing</td><td>from $175</td></tr>
-          <tr><td>Wasp/Hornet Removal</td><td>Single nest</td><td>$95–$150</td></tr>
-          <tr><td>Quarterly Plan</td><td>Scheduled maintenance</td><td>$89/visit</td></tr>
-        </tbody>
-      </table>
-      <p class="fine">*Final quote depends on infestation level, square footage, and materials.</p>
-    </div>
+    <!-- Ants -->
+    <article class="service-card">
+      <i>🐜</i>
+      <h3>Ant Treatment</h3>
+      <p>Baiting + non-repellent perimeter application for long-lasting colony control.</p>
+      <p style="font-weight:700;margin-top:.6rem;">From $135 single service</p>
+      <a class="btn" href="contact.html?svc=ants#contact-form" aria-label="Request ant treatment">Book this</a>
+    </article>
 
-    <h2>Junk Removal</h2>
-    <p>Fast, eco-friendly hauling for homes, offices, and renovations.</p>
+    <!-- Fleas -->
+    <article class="service-card">
+      <i>🪲</i>
+      <h3>Flea Treatment</h3>
+      <p>Indoor treatment + yard spot-treatments (if applicable) and pet coordination notes.</p>
+      <p style="font-weight:700;margin-top:.6rem;">From $175</p>
+      <a class="btn" href="contact.html?svc=fleas#contact-form" aria-label="Request flea treatment">Book this</a>
+    </article>
 
-    <div class="price-card">
-      <h3>Junk Removal — Pricing</h3>
-      <table class="price-table">
-        <thead><tr><th>Load Size</th><th>Typical Volume</th><th>Rate</th></tr></thead>
-        <tbody>
-          <tr><td>Minimum Pickup</td><td>Single item / few bags</td><td>$99</td></tr>
-          <tr><td>¼ Truck</td><td>~2–3 cubic yards</td><td>$150</td></tr>
-          <tr><td>½ Truck</td><td>~6–7 cubic yards</td><td>$300</td></tr>
-          <tr><td>Full Truck</td><td>~12–14 cubic yards</td><td>$550</td></tr>
-        </tbody>
-      </table>
-      <p class="fine">*Extra fees for paint/chemicals, pianos, concrete, appliances with refrigerant, etc.</p>
-    </div>
-
-    <p><a class="cta" href="contact.html">Request a Custom Quote →</a></p>
+    <!-- General Maintenance Plan -->
+    <article class="service-card">
+      <i>🛡️</i>
+      <h3>Quarterly Protection Plan</h3>
+      <p>Seasonal exterior barrier + interior as-needed. Free touch-ups between visits for covered pests.</p>
+      <p style="font-weight:700;margin-top:.6rem;">From $89/quarter (after initial)</p>
+      <a class="btn" href="contact.html?svc=plan#contact-form" aria-label="Request quarterly plan">Enroll</a>
+    </article>
   </section>
 
+  <!-- Why choose us -->
+  <section class="why">
+    <h2>Why Choose Mohegan</h2>
+    <ul class="why-list">
+      <li><i>✅</i><span>Kid & pet-conscious products</span></li>
+      <li><i>✅</i><span>Clear prep sheets and after-care</span></li>
+      <li><i>✅</i><span>Transparent pricing, no surprises</span></li>
+      <li><i>✅</i><span>Local, friendly, on-time</span></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <h4>Service Area</h4>
+      <ul>
+        <li>Baltimore City & nearby counties</li>
+        <li>Evening & weekend slots available</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Mohegan Pest Control</div>
+  </footer>
+
+  <!-- Small JS: mobile menu + year + preselect service on contact -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobile-menu');
+      const list = document.getElementById('nav-list');
+      function toggle(){ list.classList.toggle('show'); }
+      if (btn) {
+        btn.addEventListener('click', toggle);
+        btn.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') toggle(); });
+      }
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
