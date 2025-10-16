@@ -35,7 +35,6 @@ h2 {
   flex: 1;
 }
 
-/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
@@ -194,4 +193,38 @@ form button:hover {
     display: block;
     color: #333;
   }
+}
+
+/* Dark chart for extermination pricing */
+.dark-chart {
+  /* Match the screenshot style: dark background and white text */
+  background: #000;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0 28px;
+}
+
+.dark-chart h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.dark-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.dark-table thead th {
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 8px;
+}
+
+.dark-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 8px;
 }
