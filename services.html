@@ -7,36 +7,43 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/logo.png" />
   <style>
+    /* Logo */
     .logo img {
       height: 56px;
       width: auto;
       vertical-align: middle;
     }
+
+    /* Hero Banner */
     .hero {
       position: relative;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       color: #fff;
+      background: url("images/hero.png") center/cover no-repeat;
     }
-    .hero img {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: brightness(0.7);
-    }
-    .hero h1, .hero p {
+    .hero::before {
+      content: "";
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
-      margin: 0;
+      inset: 0;
+      background: rgba(0,0,0,0.45); /* overlay so text is readable */
+    }
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      padding: 20px;
     }
     .hero h1 {
-      top: 40%;
-      font-size: 2.5rem;
+      font-size: clamp(28px, 5vw, 44px);
+      margin: 0 0 12px;
     }
     .hero p {
-      top: 55%;
-      font-size: 1.2rem;
+      font-size: clamp(16px, 3vw, 20px);
+      margin: 0;
     }
   </style>
 </head>
@@ -62,9 +69,10 @@
 
 <!-- Hero Section -->
 <section class="hero">
-  <img src="images/hero.png" alt="Moving, Junk Removal & Pest Control" />
-  <h1>Our Services</h1>
-  <p>Your one-stop solution for moving, hauling and pest control in Baltimore and surrounding areas.</p>
+  <div class="hero__inner">
+    <h1>Our Services</h1>
+    <p>Your one-stop solution for moving, hauling and pest control in Baltimore and surrounding areas.</p>
+  </div>
 </section>
 
 <main>
