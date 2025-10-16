@@ -6,8 +6,6 @@
     <title>Our Services | Universal Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/logo.png">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <header>
@@ -30,18 +28,23 @@
 </header>
 
 <main>
-    <div class="services-container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero.png" alt="Moving, Junk Removal & Pest Control">
         <h1>Our Services</h1>
+        <p>Your one-stop solution for moving, hauling and pest control in Baltimore and surrounding areas.</p>
+    </section>
+    <div class="services-container">
 
         <!-- Moving Services -->
         <div class="service-section" id="moving">
             <h2>Moving Services</h2>
             <p>Whether you’re relocating across town or to a neighboring city, our moving professionals can get you there safely and stress‑free. We provide both residential and commercial moving solutions, from packing and loading to unloading and unpacking. With our fleet of well‑maintained trucks and trained movers, your belongings will be transported securely and efficiently.</p>
             <ul class="why-list">
-                <li><i class="fas fa-box"></i><span>Local &amp; long‑distance moves</span></li>
-                <li><i class="fas fa-chair"></i><span>Furniture disassembly and assembly</span></li>
-                <li><i class="fas fa-dolly"></i><span>Heavy item handling (pianos, safes and more)</span></li>
-                <li><i class="fas fa-people-carry"></i><span>Packing, wrapping &amp; protection materials</span></li>
+                <li>🚚 Local &amp; long‑distance moves</li>
+                <li>🔧 Furniture disassembly and assembly</li>
+                <li>🏋️ Heavy item handling (pianos, safes and more)</li>
+                <li>📦 Packing, wrapping &amp; protection materials</li>
             </ul>
         </div>
 
@@ -50,12 +53,13 @@
             <h2>Junk Removal</h2>
             <p>Clear out clutter quickly with our junk removal and hauling team. From single items to full property cleanouts, we remove and dispose of unwanted belongings responsibly. We donate and recycle whenever possible to minimize waste and ensure your space is left clean and ready for its next chapter.</p>
             <ul class="why-list">
-                <li><i class="fas fa-couch"></i><span>Furniture &amp; appliance removal</span></li>
-                <li><i class="fas fa-recycle"></i><span>Eco‑friendly disposal &amp; recycling</span></li>
-                <li><i class="fas fa-tree"></i><span>Yard debris &amp; construction waste hauling</span></li>
-                <li><i class="fas fa-home"></i><span>Estate, garage &amp; office cleanouts</span></li>
+                <li>🛋 Furniture &amp; appliance removal</li>
+                <li>♻️ Eco‑friendly disposal &amp; recycling</li>
+                <li>🌿 Yard debris &amp; construction waste hauling</li>
+                <li>🏠 Estate, garage &amp; office cleanouts</li>
             </ul>
-            <!-- Junk Removal & Hauling Pricing -->
+
+            <!-- Junk Removal &amp; Hauling Pricing -->
             <div class="pricing-table">
                 <h3>Junk Removal &amp; Hauling Pricing</h3>
                 <table>
@@ -107,10 +111,10 @@
             <h2>Pest Control</h2>
             <p>Protect your home or business from unwanted invaders. Our certified technicians provide comprehensive pest extermination and prevention programs tailored to your specific infestation and environment. We use integrated pest management techniques that are safe for families, pets and the planet.</p>
             <ul class="why-list">
-                <li><i class="fas fa-cockroach"></i><span>Roach, ant, flea &amp; tick control</span></li>
-                <li><i class="fas fa-rat"></i><span>Rodent control &amp; exclusion</span></li>
-                <li><i class="fas fa-bed"></i><span>Bed bug heat &amp; chemical treatments</span></li>
-                <li><i class="fas fa-hammer"></i><span>Termite inspection &amp; treatment</span></li>
+                <li>🐞 Roach, ant, flea &amp; tick control</li>
+                <li>🐭 Rodent control &amp; exclusion</li>
+                <li>🛌 Bed bug heat &amp; chemical treatments</li>
+                <li>🐜 Termite inspection &amp; treatment</li>
             </ul>
 
             <!-- Pricing Tables -->
@@ -222,7 +226,7 @@
                 </table>
             </div>
 
-            <!-- Add-On Services -->
+            <!-- Add‑On Services -->
             <div class="pricing-table">
                 <h3>Add‑On Services</h3>
                 <table>
@@ -258,7 +262,33 @@
                 </table>
             </div>
 
-            <!-- Commercial / Multi‑Unit Pricing -->
+            <!-- Monthly Extermination Rotation -->
+            <div class="pricing-table">
+                <h3>Monthly Extermination Rotation</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plan Type</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Residential</td>
+                            <td>$50/month</td>
+                            <td>Monthly extermination service for homes</td>
+                        </tr>
+                        <tr>
+                            <td>Commercial</td>
+                            <td>$100/month</td>
+                            <td>Monthly extermination service for businesses</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Commercial &amp; Multi‑Unit Pricing -->
             <div class="pricing-table">
                 <h3>Commercial &amp; Multi‑Unit Pricing</h3>
                 <table>
@@ -303,6 +333,62 @@
     </div>
 </main>
 
+<!-- Pricing Overview Section -->
+<section class="pricing-overview">
+    <h2>Pricing Overview</h2>
+    <p>Below is a summary of price ranges across our different services:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Services (count)</th>
+                <th>Price Range (min–max)</th>
+                <th>Average price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Junk Removal &amp; Hauling</td>
+                <td>6</td>
+                <td>$60–$450</td>
+                <td>$223.75</td>
+            </tr>
+            <tr>
+                <td>General Pest Control</td>
+                <td>8</td>
+                <td>$75–$1,500</td>
+                <td>$314.06</td>
+            </tr>
+            <tr>
+                <td>Specialized Treatments</td>
+                <td>8</td>
+                <td>$75–$1,500</td>
+                <td>$317.19</td>
+            </tr>
+            <tr>
+                <td>Add‑On Services</td>
+                <td>4</td>
+                <td>$50–$200</td>
+                <td>$111.88</td>
+            </tr>
+            <tr>
+                <td>Commercial &amp; Multi‑Unit</td>
+                <td>3</td>
+                <td>$45–$250</td>
+                <td>$140.83</td>
+            </tr>
+            <tr>
+                <td>Monthly Extermination Rotation</td>
+                <td>2</td>
+                <td>$50–$100</td>
+                <td>$75.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Average Price by Category</h3>
+    <img src="category_avg_chart.png" alt="Average price by category chart">
+</section>
+
 <footer>
     <div class="footer-section">
         <h4>About Us</h4>
@@ -319,9 +405,9 @@
     <div class="footer-section">
         <h4>Contact Us</h4>
         <ul>
-            <li><i class="fas fa-phone"></i> (410) 555‑1234</li>
-            <li><i class="fas fa-envelope"></i> info@universalsolutions.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Baltimore, MD &amp; Surrounding Areas</li>
+            <li>☎️ (410) 555‑1234</li>
+            <li>✉️ info@universalsolutions.com</li>
+            <li>📍 Baltimore, MD &amp; Surrounding Areas</li>
         </ul>
     </div>
     <div class="footer-bottom">
