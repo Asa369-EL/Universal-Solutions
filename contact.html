@@ -1,122 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Universal Solutions</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Universal Solutions</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="images/logo.png" alt="Universal Solutions Logo">
-        <span><strong>Universal Solutions</strong></span>
-    </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <img src="logo.png" alt="Universal Solutions logo" class="logo">
+    <h1 class="brand">Universal Solutions</h1>
     <nav>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
-    <div class="contact-container">
-        <h1>Get in Touch</h1>
-        <p style="text-align:center; max-width:700px; margin:0 auto 40px;">Whether you need pest control, help with moving or junk removal, we’re here to assist. Reach out by phone, email or using the form below and a member of our team will respond promptly.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We’re here to help with extermination, moving, and junk removal in Baltimore and beyond.</p>
+  </section>
 
-        <div class="contact-info">
-            <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <span><strong>Phone:</strong> (667)803-4395</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <span><strong>Email:</strong> upsolutions369@gmail.com</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span><strong>Service Area:</strong> Baltimore, MD &amp; Surrounding Areas</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-clock"></i>
-                <span><strong>Hours:</strong> Mon–Sat: 8 am – 6 pm</span>
-            </div>
-        </div>
+  <!-- Content -->
+  <section class="content">
+    <h2>Get in Touch</h2>
+    <p><strong>Phone:</strong> (555) 123-4567</p>
+    <p><strong>Email:</strong> info@universalsolutions.com</p>
+    <p><strong>Service Area:</strong> Baltimore, MD and surrounding regions</p>
 
-        <div class="contact-form">
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone" required>
-                <select name="service" required>
-                    <option value="" disabled selected>Select Service</option>
-                    <option value="Moving">Moving</option>
-                    <option value="Junk Removal">Junk Removal</option>
-                    <option value="Pest Control">Pest Control</option>
-                    <option value="Other">Other</option>
-                </select>
-                <textarea name="message" placeholder="Tell us about your needs" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-</main>
+    <h2>Request a Quote</h2>
+    <form action="mailto:info@universalsolutions.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
 
-<footer>
-    <div class="footer-section">
-        <h4>About Us</h4>
-        <p>Universal Solutions is a locally owned and operated company offering comprehensive moving, junk removal and pest control services. Our certified professionals are committed to providing safe, reliable and affordable solutions for homes and businesses.</p>
-    </div>
-    <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div class="footer-section">
-        <h4>Contact Us</h4>
-        <ul>
-            <li><i class="fas fa-phone"></i> (667)803-4395 </li>
-            <li><i class="fas fa-envelope"></i> upsolutions369@.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Baltimore, MD &amp; Surrounding Areas</li>
-        </ul>
-    </div>
-    <div class="footer-bottom">
-        &copy; <span id="currentYear"></span> Universal Solutions. All rights reserved.
-    </div>
-</footer>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
 
-<script>
-// Mobile navigation toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.querySelector('header nav ul');
-mobileMenu.addEventListener('click', () => {
-  navList.classList.toggle('show');
-});
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-// Form submission handler
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you for contacting us! We will get back to you soon.');
-  form.reset();
-});
-
-// Set current year in footer
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-</script>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
 </body>
 </html>
