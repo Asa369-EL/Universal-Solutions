@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Universal Solutions</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Optional helpers (safe to keep even if you already have these in style.css) */
+    html { scroll-behavior: smooth; }
+    .section { padding: 2rem 0; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+    .price-card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin: 1rem 0 2.5rem; background: #fff; }
+    .price-card h3 { margin-top: 0; }
+    .price-table { width: 100%; border-collapse: collapse; }
+    .price-table th, .price-table td { border: 1px solid #e5e5e5; padding: .75rem; text-align: left; }
+    .price-table thead th { background: #f7f7f7; }
+    .service-header { margin-top: 2.5rem; display: flex; align-items: center; gap: .5rem; }
+    .service-header .tag { font-size: 1.25rem; }
+    .anchor-nav { margin: 1rem 0 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .anchor-nav a { padding: .5rem .75rem; border: 1px solid #ddd; border-radius: 999px; text-decoration: none; }
+    .footer { background: #111; color: #eee; padding: 2rem 0; margin-top: 3rem; }
+    .footer .footer-bottom { margin-top: 1rem; opacity: .8; font-size: .95rem; }
+    .site-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem; border-bottom:1px solid #eee;}
+    .brand { margin:0; font-size:1.25rem;}
+    nav ul { list-style:none; display:flex; gap:1rem; padding:0; margin:0;}
+    nav a { text-decoration:none; }
+  </style>
 </head>
 <body>
 
@@ -21,9 +42,16 @@
 
   <main class="section container">
 
+    <!-- Quick jump links -->
+    <nav class="anchor-nav" aria-label="Jump to service">
+      <a href="#hauling">Hauling</a>
+      <a href="#junk-removal">Junk Removal</a>
+      <a href="#extermination">Extermination</a>
+    </nav>
+
     <!-- HAULING -->
-    <h2>Hauling</h2>
-    <p>Fast pickup and hauling for single items, furniture, appliances and debris.</p>
+    <h2 id="hauling" class="service-header"><span class="tag">🚚</span> Hauling</h2>
+    <p>Fast pickup and hauling for single items, furniture, appliances, and debris.</p>
     <div class="price-card">
       <h3>Hauling — Pricing</h3>
       <table class="price-table">
@@ -37,10 +65,11 @@
           <tr><td>Full Truck</td><td>~12–14 cubic yards</td><td>$400</td></tr>
         </tbody>
       </table>
+      <p><em>Note:</em> Rates exclude special handling (e.g., pianos, safes) and dump fees for restricted items when applicable.</p>
     </div>
 
     <!-- JUNK REMOVAL -->
-    <h2>Junk Removal</h2>
+    <h2 id="junk-removal" class="service-header"><span class="tag">🗑️</span> Junk Removal</h2>
     <p>Eco-friendly junk removal for homes, offices, renovations, and cleanouts.</p>
     <div class="price-card">
       <h3>Junk Removal — Pricing</h3>
@@ -55,10 +84,11 @@
           <tr><td>Full Truck</td><td>~12–14 cubic yards</td><td>$235</td></tr>
         </tbody>
       </table>
+      <p><em>Note:</em> We donate and recycle whenever possible to reduce landfill waste.</p>
     </div>
 
     <!-- EXTERMINATION -->
-    <h2>Extermination</h2>
+    <h2 id="extermination" class="service-header"><span class="tag">🐜</span> Extermination</h2>
     <p>Certified pest control for roaches, rodents, bed bugs and more. Safe, effective, and tailored to your space.</p>
     <div class="price-card">
       <h3>Extermination — Pricing</h3>
@@ -68,23 +98,22 @@
         </thead>
         <tbody>
           <tr><td>General Pest Treatment</td><td>Kitchens, baths, baseboards</td><td>$105–$175</td></tr>
-          <tr><td>Roach Clean-Out</td><td>Apt/Small home + follow-up</td><td>$55-$100 **depending on infestation** </td></tr>
+          <tr><td>Roach Clean-Out</td><td>Apt/Small home + follow-up</td><td>$55–$100 (depending on infestation)</td></tr>
           <tr><td>Bed Bug Inspection</td><td>Visual + recommendations</td><td>$25</td></tr>
-          <tr><td>Bed Bug Treatment</td><td>1BR unit (add rooms +$65)</td><td>** Base Price ** $175</td></tr>
-          <tr><td>Rodent Exclusion</td><td>Traps + entry-point sealing</td><td> $150</td></tr>
+          <tr><td>Bed Bug Treatment</td><td>1 BR unit (add rooms +$65 each)</td><td>Base price $175</td></tr>
+          <tr><td>Rodent Exclusion</td><td>Traps + entry-point sealing</td><td>$150</td></tr>
           <tr><td>Wasp/Hornet Removal</td><td>Single nest</td><td>$95–$150</td></tr>
-          <tr><td>Quarterly Plan</td><td>Scheduled maintenance</td><td>Residential $50/visit, Commercial $100/visit</td></tr>
+          <tr><td>Quarterly Plan</td><td>Scheduled maintenance</td><td>Residential $50/visit; Commercial $100/visit</td></tr>
         </tbody>
       </table>
+      <p><em>Note:</em> Multi-unit, severe infestations, or specialty pests may require custom quotes.</p>
     </div>
 
   </main>
 
   <footer class="footer">
     <div class="container">
-      <h2>About Us</h2>
-      <p>Universal Solutions is a locally owned company offering hauling, junk removal, and pest control.</p>
-      <h3>Contact Us</h3>
+      <h2>Contact Us</h2>
       <ul class="contact-details">
         <li>Phone: (667)803-4395</li>
         <li>Email: upsolutions369@gmail.com</li>
@@ -94,4 +123,4 @@
   </footer>
 
 </body>
-</html> 
+</html>
