@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Universal Solutions</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Optional helpers */
+    html { scroll-behavior: smooth; }
+    .site-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem; border-bottom:1px solid #eee;}
+    .brand { margin:0; font-size:1.25rem;}
+    nav ul { list-style:none; display:flex; gap:1rem; padding:0; margin:0;}
+    nav a { text-decoration:none; }
+    .hero { padding: 3rem 1rem; text-align: center; background: #f6f8fb; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+    .section { padding: 2rem 0; }
+    .cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1rem; }
+    .card { border:1px solid #e5e5e5; border-radius:10px; padding:1rem; background:#fff; display:flex; flex-direction:column; gap:.5rem; }
+    .icon { font-size:1.75rem; }
+    .button { display:inline-block; padding:.6rem .9rem; border:1px solid #111; text-decoration:none; border-radius:8px; }
+    .footer { background:#111; color:#eee; padding:2rem 0; margin-top:3rem; }
+    .footer-bottom { margin-top:1rem; opacity:.8; font-size:.95rem; }
+  </style>
 </head>
 <body>
 
@@ -20,24 +37,37 @@
   </header>
 
   <section class="hero">
-    <h1>Your one-stop solution for hauling, junk removal & pest control</h1>
-    <p>Serving Baltimore and the surrounding region with certified technicians and eco-friendly practices.</p>
+    <div class="container">
+      <h1>Your one-stop solution for hauling, junk removal & pest control</h1>
+      <p>Serving Baltimore and the surrounding region with certified technicians and eco-friendly practices.</p>
+    </div>
   </section>
 
   <main class="section container">
     <h2>Our Services</h2>
     <div class="cards">
       <div class="card">
+        <div class="icon">🚚</div>
+        <h3>Hauling</h3>
+        <p>Fast pickup for single items, furniture, appliances and debris.</p>
+        <!-- Directly opens the Hauling section -->
+        <a class="button" href="services.html#hauling">See Prices</a>
+      </div>
+
+      <div class="card">
         <div class="icon">🗑️</div>
         <h3>Junk Removal</h3>
-        <p>Responsible cleanouts and hauling—donation and recycling first.</p>
-        <a class="button" href="services.html">See Prices</a>
+        <p>Responsible cleanouts—donation and recycling first.</p>
+        <!-- Directly opens the Junk Removal section -->
+        <a class="button" href="services.html#junk-removal">See Prices</a>
       </div>
+
       <div class="card">
         <div class="icon">🐜</div>
         <h3>Extermination</h3>
         <p>Safe, effective pest control programs for homes and businesses.</p>
-        <a class="button" href="services.html">See Prices</a>
+        <!-- Directly opens the Extermination section -->
+        <a class="button" href="services.html#extermination">See Prices</a>
       </div>
     </div>
   </main>
