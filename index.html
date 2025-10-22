@@ -6,42 +6,20 @@
   <title>Universal Solutions</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Optional helpers */
     html { scroll-behavior: smooth; }
-    .site-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem; border-bottom:1px solid #eee;}
-    .brand { margin:0; font-size:1.25rem;}
-    nav ul { list-style:none; display:flex; gap:1rem; padding:0; margin:0;}
+    .site-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem; border-bottom:1px solid #eee; }
+    .brand { margin:0; font-size:1.25rem; }
+    nav ul { list-style:none; display:flex; gap:1rem; padding:0; margin:0; }
     nav a { text-decoration:none; }
-    
-    /* HERO SECTION with image background */
     .hero {
       position: relative;
       padding: 5rem 1rem;
       text-align: center;
-      color: white;
-      background: url('images/extermination-hero-green.png') center/cover no-repeat;
+      color: #fff;
+      background: url('images/extermination-hero-green.png?v=2') center/cover no-repeat;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 60, 0, 0.45); /* greenish overlay for text visibility */
-    }
-    .hero .container {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-    }
-
+    .hero::before { content:""; position:absolute; inset:0; background:rgba(0,60,0,0.45); }
+    .hero .container { position:relative; z-index:1; max-width:800px; margin:0 auto; }
     .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
     .section { padding: 2rem 0; }
     .cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1rem; }
@@ -65,7 +43,7 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION WITH NEW IMAGE -->
+  <!-- HERO WITH GREEN BALTIMORE IMAGE -->
   <section class="hero">
     <div class="container">
       <h1>Your one-stop solution for hauling, junk removal & pest control</h1>
