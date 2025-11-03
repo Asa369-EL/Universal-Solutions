@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,21 +10,56 @@
     html { scroll-behavior: smooth; }
     .section { padding: 2rem 0; }
     .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+
     .price-card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin: 1rem 0 2.5rem; background: #fff; }
     .price-card h3 { margin-top: 0; }
     .price-table { width: 100%; border-collapse: collapse; }
     .price-table th, .price-table td { border: 1px solid #e5e5e5; padding: .75rem; text-align: left; }
     .price-table thead th { background: #f7f7f7; }
+
     .service-header { margin-top: 2.5rem; display: flex; align-items: center; gap: .5rem; }
     .service-header .tag { font-size: 1.25rem; }
+
     .anchor-nav { margin: 1rem 0 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
     .anchor-nav a { padding: .5rem .75rem; border: 1px solid #ddd; border-radius: 999px; text-decoration: none; }
+
     .footer { background: #111; color: #eee; padding: 2rem 0; margin-top: 3rem; }
     .footer .footer-bottom { margin-top: 1rem; opacity: .8; font-size: .95rem; }
+
     .site-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem; border-bottom:1px solid #eee;}
     .brand { margin:0; font-size:1.25rem;}
     nav ul { list-style:none; display:flex; gap:1rem; padding:0; margin:0;}
     nav a { text-decoration:none; }
+
+    /* --- New image/gallery styles --- */
+    .service-hero {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      margin: 0 0 1rem;
+      height: auto;
+    }
+    .service-caption {
+      margin: -.5rem 0 1.25rem;
+      font-size: .95rem;
+      opacity: .8;
+    }
+    .service-gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: .75rem;
+      margin: .75rem 0 1.5rem;
+    }
+    .service-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      grid-column: span 6;
+    }
+    @media (max-width: 700px) {
+      .service-gallery img { grid-column: span 12; }
+    }
   </style>
 </head>
 <body>
@@ -53,6 +87,16 @@
     <!-- HAULING -->
     <h2 id="hauling" class="service-header"><span class="tag">🚚</span> Hauling</h2>
     <p>Fast pickup and hauling for single items, furniture, appliances, and debris.</p>
+
+    <!-- NEW hauling image -->
+    <img
+      src="images/hauling-truck.jpg"
+      alt="Universal Solutions truck loaded for a hauling job at the transfer station"
+      class="service-hero"
+      loading="lazy"
+    >
+    <p class="service-caption">Full-load example — pricing depends on volume and dump fees.</p>
+
     <div class="price-card">
       <h3>Hauling — Pricing</h3>
       <table class="price-table">
@@ -91,6 +135,23 @@
     <!-- EXTERMINATION -->
     <h2 id="extermination" class="service-header"><span class="tag">🐜</span> Extermination</h2>
     <p>Certified pest control for roaches, rodents, bed bugs and more. Safe, effective, and tailored to your space.</p>
+
+    <!-- NEW extermination gallery -->
+    <div class="service-gallery" aria-label="Extermination work photos">
+      <img src="images/extermination-nest-ground.jpg"
+           alt="Removed paper wasp nests lined up on the lawn after treatment"
+           loading="lazy">
+      <img src="images/extermination-wasp-nest-eave.jpg"
+           alt="Large paper wasp nest under the eave before removal"
+           loading="lazy">
+      <img src="images/extermination-door-gap.jpg"
+           alt="Exterior door sweep gap allowing pest entry"
+           loading="lazy">
+      <img src="images/extermination-ants-sill.jpg"
+           alt="Ant trail along a window sill prior to targeted treatment"
+           loading="lazy">
+    </div>
+
     <div class="price-card">
       <h3>Extermination — Pricing</h3>
       <table class="price-table">
